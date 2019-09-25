@@ -2,17 +2,26 @@
     "RABBITMQ": {
         "host": "127.0.0.1",
         "port": 5672,
-        "username": "test",
+        "username": "foonsun",
         "password": "123456"
     },
-    "PROXY": "http://127.0.0.1:1087",
 
     "ACCOUNTS": [
         {
-            "platform": "binance",
-            "account": "test@gmail.com",
-            "access_key": "abc123",
-            "secret_key": "abc123"
+            "platform": "huobi",
+            "account": "foonsun888",
+            "access_key": "access_key",
+            "secret_key": "secret_key",
+            "host": "https://api.huobi.vn",
+            "update_interval": 1
+        },
+        {
+            "platform": "huobi_future",
+            "account": "foonsun888",
+            "access_key": "access_key",
+            "secret_key": "secret_key",
+            "host": "https://api.btcgateway.pro",
+            "update_interval": 1
         }
     ]
 }
