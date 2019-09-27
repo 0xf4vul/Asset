@@ -60,7 +60,7 @@ class HuobiAsset:
             if name not in temps:
                 temps[name] = {}
             if t == "trade":
-                temps[name]["total"] = b
+                temps[name]["free"] = b
             else:
                 temps[name]["locked"] = b
 
@@ -69,9 +69,9 @@ class HuobiAsset:
             if item["total"] <= 0:
                 continue
             assets[name] = {
-                "free": "%.8f" % (item["total"] - item["locked"]),
+                "free": "%.8f" % item["free"],
                 "locked": "%.8f" % item["locked"],
-                "total": "%.8f" % item["total"]
+                "total": "%.8f" % (item["free"] + item["locked"])
             }
 
         if assets == self._assets:
