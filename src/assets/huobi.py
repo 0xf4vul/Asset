@@ -66,7 +66,7 @@ class HuobiAsset:
 
         assets = {}
         for name, item in temps.items():
-            if item["total"] <= 0:
+            if item["free"] + item["locked"] <= 0:
                 continue
             assets[name] = {
                 "free": "%.8f" % item["free"],
