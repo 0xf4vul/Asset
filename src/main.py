@@ -36,31 +36,31 @@ def initialize():
     for item in config.accounts:
         platform = item["platform"]
         if platform == const.OKEX:
-            from assets.okex import OKExAsset as AssetServer
+            from .assets.okex import OKExAsset as AssetServer
         elif platform == const.OKEX_SWAP:
-            from assets.okex_swap import OKExSwapAsset as AssetServer
+            from .assets.okex_swap import OKExSwapAsset as AssetServer
         elif platform == const.OKEX_FUTURE:
-            from assets.okex_future import OKExFutureAsset as AssetServer
+            from .assets.okex_future import OKExFutureAsset as AssetServer
         elif platform == const.BINANCE:
-            from assets.binance import BinanceAsset as AssetServer
+            from .assets.binance import BinanceAsset as AssetServer
         elif platform == const.HUOBI:
-            from assets.huobi import HuobiAsset as AssetServer
+            from .assets.huobi import HuobiAsset as AssetServer
         elif platform == const.DERIBIT:
-            from assets.deribit import DeribitAsset as AssetServer
+            from .assets.deribit import DeribitAsset as AssetServer
         elif platform == const.BITMEX:
-            from assets.bitmex import BitmexAsset as AssetServer
+            from .assets.bitmex import BitmexAsset as AssetServer
         elif platform == const.COINSUPER:
-            from assets.coinsuper import CoinsuperAsset as AssetServer
+            from .assets.coinsuper import CoinsuperAsset as AssetServer
         elif platform == const.COINSUPER_PRE:
-            from assets.coinsuper_pre import CoinsuperPreAsset as AssetServer
+            from .assets.coinsuper_pre import CoinsuperPreAsset as AssetServer
         elif platform == const.KRAKEN:
-            from assets.kraken import KrakenAsset as AssetServer
+            from .assets.kraken import KrakenAsset as AssetServer
         elif platform == const.GATE:
-            from assets.gate import GateAsset as AssetServer
+            from .assets.gate import GateAsset as AssetServer
         elif platform == const.KUCOIN:
-            from assets.kucoin import KucoinAsset as AssetServer
+            from .assets.kucoin import KucoinAsset as AssetServer
         elif platform == const.HUOBI_FUTURE:
-            from assets.huobi_future import HuobiFutureAsset as AssetServer
+            from .assets.huobi_future import HuobiFutureAsset as AssetServer
         else:
             logger.error("platform error! platform:", platform)
             continue
