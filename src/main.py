@@ -61,6 +61,8 @@ def initialize():
             from .assets.kucoin import KucoinAsset as AssetServer
         elif platform == const.HUOBI_FUTURE:
             from .assets.huobi_future import HuobiFutureAsset as AssetServer
+        elif platform == const.FCOIN:
+            from .assets.fcoin import FcoinAsset as AssetServer
         else:
             logger.error("platform error! platform:", platform)
             continue
