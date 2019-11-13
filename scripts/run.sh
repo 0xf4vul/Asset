@@ -2,4 +2,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../env.sh
 cd $DIR/..
 echo `date`
-python run.py config.json
+python run.py config.json asset

@@ -1,4 +1,13 @@
 {
+    "SERVER_ID": "asset",
+    "LOG": {
+        "console": false,
+        "level": "DEBUG",
+        "path": "/data/logs/servers/asset",
+        "name": "assets.log",
+        "clear": true,
+        "backup_count": 5
+    },
     "RABBITMQ": {
         "host": "127.0.0.1",
         "port": 5672,
@@ -13,7 +22,7 @@
             "access_key": "access_key",
             "secret_key": "secret_key",
             "host": "https://api.huobi.vn",
-            "update_interval": 1
+            "update_interval": 10
         },
         {
             "platform": "huobi_future",
@@ -21,7 +30,16 @@
             "access_key": "access_key",
             "secret_key": "secret_key",
             "host": "https://api.btcgateway.pro",
-            "update_interval": 1
+            "update_interval": 10
+        },
+        {
+            "platform": "okex_swap",
+            "account": "foonsun",
+            "host": "https://www.okex.com",
+            "update_interval": 10,
+	    "access_key": "access_key",
+	    "secret_key": "secret_key",
+	    "passphrase": "passphrase"
         }
     ]
 }
