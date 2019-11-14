@@ -56,14 +56,15 @@ class OKExSwapAsset:
 
         assets = {}
         for item in result["info"]:
+            import ipdb;ipdb.set_trace()
             symbol = item["instrument_id"].split("-")[0]
             total = float(item["equity"])
-            free = float(item["total_avail_balance"])
+            locked = float(item["margin"])
             if total > 0:
                 assets[symbol] = {
                     "total": "%.8f" % total,
-                    "free": "%.8f" % free,
-                    "locked": "%.8f" % (total - free)
+                    "free": "%.8f" % (total - locked),
+                    "locked": "%.8f" % locked
                 }
 
         if assets == self._assets:
