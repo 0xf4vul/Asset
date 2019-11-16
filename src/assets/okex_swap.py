@@ -56,7 +56,6 @@ class OKExSwapAsset:
 
         assets = {}
         for item in result["info"]:
-            import ipdb;ipdb.set_trace()
             symbol = item["instrument_id"].split("-")[0]
             total = float(item["equity"])
             locked = float(item["margin"])
