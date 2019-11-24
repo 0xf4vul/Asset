@@ -22,7 +22,7 @@ Date:   2018/09/20
 Email:  huangtao@ifclover.com
 """
 
-import sys
+import sys, time
 
 from quant import const
 from quant.quant import quant
@@ -73,10 +73,11 @@ def initialize():
 
 def main():
     config_file = sys.argv[1]  # config file, e.g. config.json.
-    quant.initialize(config_file)
-    initialize()
-    quant.start()
-
+    while True:
+        quant.initialize(config_file)
+        initialize()
+        quant.start()
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
